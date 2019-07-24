@@ -12,7 +12,7 @@ Note:
 
 - Built [EF Hello](https://www.efhello.com/) with TypeScript
 - Built various web sites with TypeScript
-- Background in low level languages (so like types 🙂)
+- Background in native languages (so like types 🙂)
 
 ---
 
