@@ -1,0 +1,49 @@
+{
+  "private": true,
+  "name": "@mattyclarkson/slides-typescript",
+  "version": "0.0.0",
+  "description": "A presentation about TypeScript",
+  "repository": "gitlab:tubtech/tlg/business-plan",
+  "homepage": "https://github.com/mattyclarkson/slides-typescript",
+  "bugs": "https://github.com/mattyclarkson/slides-typescript/issues",
+  "author": "Matt Clarkson <mattyclarkson@gmail.com>",
+  "license": "MIT",
+  "main": "dist/lib/index.umd.js",
+  "module": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test",
+    "doc": "docs"
+  },
+  "keywords": [
+    "markdown",
+    "document",
+    "presentation"
+  ],
+  "scripts": {
+    "lint": "npm run lint:commit && npm run lint:format",
+    "lint:commit": "commitlint --from=origin/master --to=HEAD",
+    "lint:format": "prettier --check '**/{[^.]*,.*.*}'",
+    "format": "prettier --write '**/{[^.]*,.*.*}'"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "husky": "^3.0.1",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  }
+}
