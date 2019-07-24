@@ -1,3 +1,5 @@
 # slides-typescript
 
-A presentation about TypeScript
+A [presentation][presentation] about TypeScript and setting up a workflow around it.
+
+[presentation]: https://gitpitch.com/mattyclarkson/slides-typescript
