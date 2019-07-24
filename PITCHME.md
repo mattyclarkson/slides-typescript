@@ -4,7 +4,7 @@ As of 2019-07-24
 
 Note:
 
-- View this presentation at https://gitpitch.com/mattyclarkson/slides-typescript
+- View this [presentation][presentation]
 
 ---
 
@@ -30,7 +30,7 @@ interface IController {
 
 Note:
 
-- View [project](https://www.typescriptlang.org/)
+- View [project][typescript]
 - A transpiler converts source code into more source code
 - Interface has:
   - Async function interface
@@ -63,7 +63,7 @@ Note:
 
 Note:
 
-- Read about [Babel](https://babeljs.io)
+- Read about [Babel][babel]
 - A polyfill is JavaScript code that implements a new modern feature in
 - backwards compatible JavaScript
 - Has huge ecosystem support
@@ -81,7 +81,7 @@ Note:
 
 Note:
 
-- View the [process](https://tc39.es/process-document/)
+- View the [process][tc-39-process]
 
 ---
 
@@ -94,8 +94,40 @@ Note:
 
 Note:
 
-- Need [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript)
+- Need [`@babel/preset-typescript`][babel-preset-typescript]
 - Prevents mutliple polyfills of `tsc`/`Babel` both transpiling
 - Fits nicely into JavaScript ecosystem
 - Makes type checking a linting step
 - Can watch for changes, speeding up development
+
+---
+
+### Workflow
+
+- Bundle with `rollup`
+  - Transpiles with Babel
+- Type check with `tsc`
+- Lint with [ESlint][eslint]
+- Docs with [TypeDoc][typedoc]
+- Test with [Jest][jest]
+- Release with [`semantic-release`][semantic-release]
+- Commit hooks with [Husky][husky]
+
+Note:
+
+- Code is written in `lib/` in TypeScript`
+- Rollup can create ECMAscript modules that are transpiled
+  - Can also create a UMD for Node
+- Linting can help catch errors early
+
+[presentation]: https://gitpitch.com/mattyclarkson/slides-typescript
+[typescript]: https://www.typescriptlang.org/
+[tc-39-process]: https://tc39.es/process-document/
+[babel]: https://babeljs.io
+[babel-preset-typescript]: https://babeljs.io/docs/en/babel-preset-typescript
+[eslint]: https://eslint.org/
+[typedoc]: https://typedoc.org/
+[jsdoc]: https://jsdoc.app/
+[jest]: https://jestjs.io/
+[husky]: https://github.com/typicode/husky
+[semantic-release]: https://semantic-release.gitbook.io/semantic-release/
