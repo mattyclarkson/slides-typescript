@@ -104,10 +104,11 @@ Note:
 
 ### Workflow
 
-- Bundle with `rollup`
+- Bundle with [`rollup`][rollup]
   - Transpiles with Babel
 - Type check with `tsc`
-- Lint with [ESlint][eslint]
+- [Prettier][prettier] for formatting
+- Lint with [ESLint][eslint]
 - Docs with [TypeDoc][typedoc]
 - Test with [Jest][jest]
 - Release with [`semantic-release`][semantic-release]
@@ -116,10 +117,35 @@ Note:
 Note:
 
 - Code is written in `lib/` in TypeScript`
-- Rollup can create ECMAscript modules that are transpiled
-  - Can also create a UMD for Node
+- Rollup uses Babel to transpile
+  - Creates ECMAscript module
+  - Create UMD for node
+- `tsc`
+  - Creates type definitions
+  - Does type checking
+- Prettier does (all languages) formatting
 - Linting can help catch errors early
+  - Turn on ESLint checks
+- Documentation of API is useful
+  - TypeDoc isn't great but good enough
+- Jest is testing framework from Facebook
+  - Useful headless testing
+  - Has different testing environments
+  - headless browser testing with https://webdriver.io
+- Semantic release automates continuous delivery
+  - Bumps version
+  - Generates changelog
+  - Creates tag
+  - Publishes package on `npm`
+  - Has plugins to automate any continuous delivery
+- Commit hooks help maintain code quality
+  - Setup conventional commits to conform to semantic release
+  - Check code format on commit
+  - Test code on push
 
+[webdriver]: https://webdriver.io
+[prettier]: https://prettier.io/
+[rollup]: https://rollupjs.org
 [presentation]: https://gitpitch.com/mattyclarkson/slides-typescript
 [typescript]: https://www.typescriptlang.org/
 [tc-39-process]: https://tc39.es/process-document/
