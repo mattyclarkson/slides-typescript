@@ -10,7 +10,7 @@ Note:
 
 ### Me
 
-- Built [EF Hello](https://www.efhello.com/) with TypeScript
+- Built [EF Hello][ef-hello] with TypeScript
 - Built various web sites with TypeScript
 - Background in native languages (so like types 🙂)
 
@@ -105,7 +105,7 @@ Note:
 ### Workflow
 
 - Bundle with [`rollup`][rollup]
-  - Transpiles with Babel
+  - Transpiles with [Babel][babel]
 - Type check with `tsc`
 - [Prettier][prettier] for formatting
 - Lint with [ESLint][eslint]
@@ -116,7 +116,7 @@ Note:
 
 Note:
 
-- Code is written in `lib/` in TypeScript`
+- Code is written in `lib/` in TypeScript
 - Rollup uses Babel to transpile
   - Creates ECMAscript module
   - Create UMD for node
@@ -143,6 +143,7 @@ Note:
   - Check code format on commit
   - Test code on push
 
+[ef-hello]: https://www.efhello.com/
 [webdriver]: https://webdriver.io
 [prettier]: https://prettier.io/
 [rollup]: https://rollupjs.org
